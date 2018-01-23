@@ -1,0 +1,17 @@
+.Header {
+  margin-bottom: 15px;
+}
+
+.Header a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #123abc;
+  background-color: white;
+}
+
+.Header a.active {
+  font-weight: bold;
+  color: white;
+  background-color: #123abc;
+}

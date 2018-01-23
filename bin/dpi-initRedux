@@ -1,0 +1,11 @@
+#!/bin/bash
+
+INSTALL_DIR=${1:-$PWD}
+
+echo "Installing to $INSTALL_DIR/"
+
+cp -r ~/.de314/rdx $INSTALL_DIR/src/
+
+echo "Copied files. Installing dependencies"
+
+npm i redux reselect redux-localstorage react-redux redux-form react-redux-toastr
