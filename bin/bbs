@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# You need to globally install broswser-sync `npm i -g browser-sync` and might need to export the node path
+# Then you can run `$ bbs` to serve the current directory or `bbs ~/workspace/web/my-project` to specify the base directory
+
+SERVER_DIR=${1:-$PWD}
+
+browser-sync start -s $SERVER_DIR -f $SERVER_DIR --port 3333 --ui-port 3334 --directory --cors

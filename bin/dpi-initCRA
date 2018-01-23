@@ -1,0 +1,19 @@
+#!/bin/bash
+
+INSTALL_DIR=${1:-$PWD}
+
+echo "Initializing $INSTALL_DIR/"
+
+rm $INSTALL_DIR/src/index.*
+rm $INSTALL_DIR/src/App.*
+rm $INSTALL_DIR/src/logo.svg
+rm $INSTALL_DIR/src/registerServiceWorker.js
+
+cp -r ~/.de314/cra/.env $INSTALL_DIR/.env
+cp -r ~/.de314/cra/* $INSTALL_DIR/
+
+mkdir src/hoc
+
+echo "Copied files. Installing dependencies"
+
+npm i react-router-dom lodash recompose classnames axios moment react-copy-to-clipboard uuid
